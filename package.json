@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "html-entities": "^2.4.0",
     "next": "13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.63.6"
   }
 }
