@@ -22,7 +22,7 @@ export default async function Contact() {
     return(
         <div className={styles.pageContent}>
             <h2>{restData.acf.header_text}</h2>
-            <p>{restData.acf.invitation_to_connect}</p>
+            <p>{restData.acf.invitation_to_contact}</p>
 
             <h3>Email</h3>
             <p>{restData.acf.email}</p>

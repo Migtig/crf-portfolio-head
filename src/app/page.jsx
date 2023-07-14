@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 
 // Import styles
 import styles from './styles/home.module.scss'
+import './styles/styles.scss'
 
 // Import components
 import Loading from './Loading'

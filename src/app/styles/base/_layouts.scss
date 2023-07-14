@@ -1,0 +1,102 @@
+html {
+    background-color: $charcoal;
+
+    body {
+        min-height: 100vh;
+
+        header {
+            height: 1rem;
+        }
+
+        .siteSidebar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 1rem;
+
+
+            .bm-overlay {
+                background-color: $off-white !important;
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+
+            .bm-burger-button {
+                position: absolute;
+                z-index: 900 !important;
+
+                right: 1rem;
+                transform: translate(0, -50%);
+
+                .burgerIcon {
+                    height: 36px;
+
+                    svg {
+                        height: 36px;
+                        width: auto;
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+
+            .burgerMenu {
+                width: 100vw !important;
+                text-align: center;
+
+                .bm-item ul {
+                    padding-left: 0;
+                }
+
+                .bm-cross-button {
+                    width: fit-content !important;
+                    height: fit-content !important;
+                }
+
+                .closeIcon svg {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 770px) {
+        body.layout {
+            display: grid;
+            grid-template-areas: 
+            'header1 header2'
+            'sidebar contento';
+    
+            // grid-template-columns: ;
+        
+            header {
+                grid-area: header1;
+                height: 4rem;
+                border-bottom: solid $line-thickness $charcoal;
+                border-right: solid $line-thickness $charcoal;
+            }
+    
+            div.header2 {
+                grid-area: header2;
+                height: 4rem;
+                border-bottom: solid $line-thickness $charcoal;
+            }
+        
+            .siteSidebar {
+                grid-area: sidebar;
+                border-right: solid $line-thickness $charcoal;
+    
+            }
+        
+            .main {
+                grid-area: contento;
+                padding: 2rem 4rem;
+            }
+        }
+    }
+
+
+}
+

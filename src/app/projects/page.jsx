@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 // Import styles
 import styles from '../styles/home.module.scss'
+// import '../styles/project-layout.scss'
 
 // Import components
 import ProjectCard from './ProjectCard'

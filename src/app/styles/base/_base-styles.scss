@@ -1,0 +1,32 @@
+body {
+    margin: none;
+
+    &.layout-blue {
+        background-color: $bg-blue;
+        color: $off-white;
+    }
+
+    &.layout-red {
+        background-color: $bg-red;
+        color: $off-white;
+    }
+
+    &.layout-green {
+        background-color: $bg-green;
+        color: $off-white;
+    }
+
+    &.layout-white {
+        background-color: $off-white;
+        color: $charcoal;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
