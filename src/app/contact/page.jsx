@@ -2,7 +2,6 @@
 import Link from 'next/link'
 
 // Import styles
-import styles from '../styles/home.module.scss'
 
 async function fetchData(restPath) {
 
@@ -20,8 +19,16 @@ export default async function Contact() {
     const restData = await fetchData('https://connorfroese.ca/portfolio-src/wp-json/wp/v2/pages/23')
     
     return(
-        <div className={styles.pageContent}>
-            <h2>{restData.acf.header_text}</h2>
+        <div className='page page-contact'>
+            <h1 className='page-title-mobile'>Contact</h1>
+
+
+
+            <div className='header-connect'>
+                <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill='currentColor' d="m10.211 7.155c-.141-.108-.3-.157-.456-.157-.389 0-.755.306-.755.749v8.501c0 .445.367.75.755.75.157 0 .316-.05.457-.159 1.554-1.203 4.199-3.252 5.498-4.258.184-.142.29-.36.29-.592 0-.23-.107-.449-.291-.591-1.299-1.002-3.945-3.044-5.498-4.243z"/></svg>
+
+                <h2>{restData.acf.header_text}</h2>
+            </div>
             <p>{restData.acf.invitation_to_contact}</p>
 
             <h3>Email</h3>

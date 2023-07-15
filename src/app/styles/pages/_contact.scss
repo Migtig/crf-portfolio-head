@@ -1,0 +1,37 @@
+.page-contact {
+
+    padding: 1rem;
+
+    .header-connect {
+
+        display: flex;
+        flex-direction: row;
+
+
+        svg {
+            display: inline;
+            height: 1.5rem;
+            margin: none;
+
+            color: $act-brown;
+        }
+
+        h2 {
+            display: inline;
+            margin: 0;
+        }
+    }
+
+    h3 {
+        color: $act-brown;
+    }
+
+    p {
+        font-weight: 300;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+
+        margin-bottom: 2rem;
+    }
+
+}

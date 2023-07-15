@@ -3,8 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { decode } from 'html-entities';
 
-// Import styles
-import styles from '../styles/projectCard.module.scss'
 
 async function fetchData(imageID) {
 
@@ -25,29 +23,29 @@ export default async function ProjectCard({ prop }) {
 
 
     return(
-        <article className={styles.projectCard}>
+        <article className='project-card'>
             <Image
                 src={imageObject.media_details.sizes.large.source_url}
                 width={imageObject.media_details.sizes.large.width}
                 height={imageObject.media_details.sizes.large.height}
                 alt={imageObject.alt_text}
                 priority={true}
-                className={styles.projectScreenshot}
+                className='screenshot'
             />
 
             <h2>{ decode(prop.title.rendered) }</h2>
 
-            <ul className={styles.techStack}>
+            <ul className='tech-stack'>
                 {prop.acf.project_tech_stack.map((skill) => (
                     <li>{skill}</li>
                 ))}
             </ul>
 
-            <p>{prop.acf.project_overview}</p>
+            <p className='overview'>{prop.acf.project_overview}</p>
 
-            <div className={styles.repoLink}><Link href={prop.acf.project_repo_link.url}>{prop.acf.project_repo_link.title}</Link></div>
+            <div className='repo-link'><Link href={prop.acf.project_repo_link.url}>{prop.acf.project_repo_link.title}</Link></div>
 
-            <div className={styles.projectLink}><Link href={prop.acf.project_link.url}>{prop.acf.project_link.title}</Link></div>
+            <div className='project-link'><Link href={prop.acf.project_link.url}>{prop.acf.project_link.title}</Link></div>
 
         </article>
     )

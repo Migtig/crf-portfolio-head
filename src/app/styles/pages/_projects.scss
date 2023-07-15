@@ -1,0 +1,61 @@
+.page-projects {
+
+    .project-card {
+        padding: 0;
+        margin: 4rem 0 8rem;
+    
+        .screenshot {
+            width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 1.4rem;
+        }
+
+        ul {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            li {
+                margin: 0.2rem 0.2rem;
+                padding: 0.3rem 0.8rem;
+                background-color: $act-brown;
+                border-radius: 1rem;
+
+                font-size: 0.8rem;
+            }
+        }
+
+        .overview {
+            font-weight: 300;
+            line-height: 2rem;
+        }
+
+        .repo-link,
+        .project-link {
+            text-align: right;
+            margin-bottom: 3rem;
+        }
+
+        .repo-link a {
+            padding: 0.2rem 0.5rem;
+            border-bottom: solid 2px $off-white;
+            margin: 0 1rem;
+        }
+
+        .project-link a {
+            background-color: $act-brown;
+            padding: 0.8rem 1.5rem;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $charcoal;
+            }
+        }
+    }
+}

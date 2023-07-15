@@ -1,10 +1,6 @@
 // Import functions
 import Image from 'next/image'
 
-// Import styles
-import styles from '../styles/home.module.scss'
-import abtStyles from '../styles/about.module.scss'
-
 
 async function fetchData(restPath) {
 
@@ -23,23 +19,28 @@ export default async function About() {
     const imgData = await fetchData(`https://connorfroese.ca/portfolio-src/wp-json/wp/v2/media/${restData.acf.portrait_image}`)
     
     return(
-        <div className={styles.pageContent}>
-            <section className={abtStyles.section_personal}>
+        <div className='page page-about'>
+
+            <h1 className='page-title-mobile'>About Me</h1>
+
+
+            <section className='section-personal'>
+
+                <h2>The Personal Bits</h2>
+
                 <Image
                     src={imgData.media_details.sizes.full.source_url}
                     width={imgData.media_details.sizes.full.width}
                     height={imgData.media_details.sizes.full.height}
                     alt={imgData.alt_text}
                     priority={true}
-                    className={abtStyles.portraitImage}
+                    className='portrait'
                 />
-
-                <h2>The Personal Bits</h2>
 
                 <p>{restData.acf.short_bio}</p>
             </section>
 
-            <section className={abtStyles.section_professional}>
+            <section className='section-professional'>
                 <h2>The Professional Bits</h2>
 
                 <ul>

@@ -1,25 +1,10 @@
-html {
+.siteSidebar {
 
-    body {
+    font-family: var(--font-elza);
 
-        .siteSidebar {
 
-            font-family: var(--font-elza);
-            
-            .logoWrapper {
-                position: relative;
-                aspect-ratio: 1 / 1;
-                width: 4rem;
-            }
-
-            .copyright {
-                font-weight: 700;
-            }
-        }
-
-        .main {
-            font-family: var(--font-elza);
-        }
-    }
 }
 
+.main {
+    font-family: var(--font-elza);
+}

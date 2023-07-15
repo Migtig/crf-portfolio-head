@@ -1,5 +1,6 @@
-body {
+div.layout {
     margin: none;
+    min-height: 100vh;
 
     &.layout-blue {
         background-color: $bg-blue;
@@ -21,12 +22,32 @@ body {
         color: $charcoal;
     }
 
+    h1 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
     ul {
         list-style: none;
+    }
+
+    svg {
+        color: inherit;
     }
 
     a {
         text-decoration: none;
         color: inherit;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $act-brown;
+        }
     }
 }

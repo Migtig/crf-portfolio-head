@@ -1,0 +1,14 @@
+@import 'home';
+@import 'projects';
+@import 'about';
+@import 'contact';
+
+.page {
+    letter-spacing: 1px;
+
+    .page-title-mobile {
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-bottom: 4rem;
+    }
+}

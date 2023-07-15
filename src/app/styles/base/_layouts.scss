@@ -15,6 +15,12 @@ html {
 
             padding: 0 1rem;
 
+            .logoWrapper {
+                position: relative;
+                aspect-ratio: 1 / 1;
+                width: 4rem;
+            }
+
 
             .bm-overlay {
                 background-color: $off-white !important;
@@ -44,14 +50,58 @@ html {
             .burgerMenu {
                 width: 100vw !important;
                 text-align: center;
+                color: $charcoal;
 
-                .bm-item ul {
-                    padding-left: 0;
+                .bm-item {
+                    position: relative;
+                    height: 100%;
+
+                    ul {
+                        padding-left: 0;
+                    }
+
+                    .mainNav {
+                        font-size: 2rem;
+                        font-weight: 600;
+
+                        li {
+                            margin: 0 2rem;
+                            padding: 2rem;
+                            border-bottom: solid 2px $charcoal;
+
+                            &:nth-last-child(1) {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+
+                    .footItems {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%, -100%);
+
+                        width: 100%;
+
+                        ul {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            justify-content: center;
+                        }
+
+                        .copyright {
+                            font-weight: 700;
+                        }
+                    }
                 }
+
 
                 .bm-cross-button {
                     width: fit-content !important;
                     height: fit-content !important;
+                    top: -1rem !important;
+                    right: 1.5rem !important;
                 }
 
                 .closeIcon svg {
@@ -60,9 +110,13 @@ html {
                 }
             }
         }
+
+        .main {
+            padding: 1rem 1rem;
+        }
     }
 
-    @media (min-width: 770px) {
+    @media (min-width: 700px) {
         body.layout {
             display: grid;
             grid-template-areas: 

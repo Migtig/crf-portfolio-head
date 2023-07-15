@@ -1,15 +1,5 @@
-// Import functions
-import Image from 'next/image'
-import Link from 'next/link'
-
-// Import styles
-import styles from '../styles/home.module.scss'
-// import '../styles/project-layout.scss'
-
 // Import components
 import ProjectCard from './ProjectCard'
-
-// Import media
 
 
 async function fetchData() {
@@ -31,7 +21,10 @@ export default async function Projects() {
 
     return(
 
-        <div className={styles.pageContent}>
+        <div className='page page-projects'>
+
+            <h1 className='page-title-mobile'>Projects</h1>
+
             {restData.map((project) => (
                 <ProjectCard prop={project} key={project.id}/>
             ))}
