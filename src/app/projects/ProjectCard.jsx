@@ -33,19 +33,25 @@ export default async function ProjectCard({ prop }) {
                 className='screenshot'
             />
 
-            <h2>{ decode(prop.title.rendered) }</h2>
+            <div className='project-info'>
+                <h2>{ decode(prop.title.rendered) }</h2>
 
-            <ul className='tech-stack'>
-                {prop.acf.project_tech_stack.map((skill) => (
-                    <li>{skill}</li>
-                ))}
-            </ul>
+                <ul className='tech-stack'>
+                    {prop.acf.project_tech_stack.map((skill) => (
+                        <li>{skill}</li>
+                    ))}
+                </ul>
 
-            <p className='overview'>{prop.acf.project_overview}</p>
+                <p className='overview'>{prop.acf.project_overview}</p>
 
-            <div className='repo-link'><Link href={prop.acf.project_repo_link.url}>{prop.acf.project_repo_link.title}</Link></div>
+                <div className='links'>
+                    <div className='repo-link'><Link href={prop.acf.project_repo_link.url}>{prop.acf.project_repo_link.title}</Link></div>
 
-            <div className='project-link'><Link href={prop.acf.project_link.url}>{prop.acf.project_link.title}</Link></div>
+                    <div className='project-link'><Link href={prop.acf.project_link.url}>{prop.acf.project_link.title}</Link></div>
+                </div>
+
+            </div>
+
 
         </article>
     )

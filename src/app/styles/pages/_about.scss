@@ -61,4 +61,116 @@
             }
         }
     }
+
+    @media (min-width: 700px) {
+
+        padding-left: 4rem;
+
+        .section-personal {
+
+            display: grid;
+            grid-template-areas: 
+            'secthead secthead'
+            'picture picture'
+            'bio bio';
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 5rem auto;
+            gap: 1rem;
+
+            h2 {
+                grid-area: secthead;
+                text-align: right;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+
+            .portrait {
+                grid-area: picture;
+                padding: 0 0 0 1rem;
+                border-left: solid 0.5rem $act-brown;
+                margin: 0 auto;
+            }
+
+            p {
+                grid-area: bio;
+                text-align: right;
+                font-weight: 300;
+            }
+        }
+
+        .section-professional {
+
+            h2 {
+                text-align: right;
+                font-size: 2rem;
+                font-weight: 500;
+            }
+
+            ul {
+
+                li {
+
+
+                    h3 {
+                        margin: 0;
+                        padding-left: 1rem;
+                        font-size: 3rem;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        .section-personal {
+
+            grid-template-areas: 
+            'picture secthead'
+            'picture bio';
+
+
+        }
+
+        .section-professional {
+
+            ul {
+
+                li {
+
+                    height: 6.4rem;
+
+                    h3 {
+                        margin: 0;
+                        padding-left: 2rem;
+                        font-size: 5.5rem;
+                    }
+
+                    p {
+                        display: none;
+                    }
+
+                    &:hover {
+
+                        background-color: $act-brown;
+                        
+                        h3 {
+                            display: none;
+                        }
+
+                        p {
+                            display: block;
+
+                            font-size: 2.5rem;
+                            font-weight: 300;
+                            color: $charcoal;
+                            padding-bottom: 0.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

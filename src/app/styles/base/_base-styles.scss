@@ -5,21 +5,119 @@ div.layout {
     &.layout-blue {
         background-color: $bg-blue;
         color: $off-white;
+
+        @media (min-width: 700px) {
+            
+            .header1,
+            .header2 {
+                background-color: $bg-blue;
+                border-bottom: solid 4px $off-white !important;
+            }
+
+            .header2,
+            .main {
+                border-left: solid 4px $off-white !important;
+            }
+
+            .main-nav li:nth-child(1) {
+                background-color: $act-brown;
+
+                .page-marker {
+                    background-color: $bg-blue;
+                    display: inline !important;
+                }
+
+                a,
+                a:hover,
+                a:active,
+                a:focus {
+                    color: $off-white;
+                }
+            }
+        }
+
     }
 
     &.layout-red {
         background-color: $bg-red;
         color: $off-white;
+
+        @media (min-width: 700px) {
+
+            .header1,
+            .header2 {
+                background-color: $bg-red;
+                border-bottom: solid 4px $off-white !important;
+            }
+    
+            .header2,
+            .main {
+                border-left: solid 4px $off-white !important;
+            }
+    
+            .main-nav li:nth-child(2) {
+                background-color: $act-brown;
+    
+                .page-marker {
+                    background-color: $bg-red;
+                    display: inline !important;
+                }
+    
+                a,
+                a:hover,
+                a:active,
+                a:focus {
+                    color: $off-white;
+                }
+            }
+        }
     }
 
     &.layout-green {
         background-color: $bg-green;
         color: $off-white;
+
+        @media (min-width: 700px) {
+
+            .header1,
+            .header2 {
+                background-color: $bg-green;
+                border-bottom: solid 4px $off-white !important;
+            }
+    
+            .header2,
+            .main {
+                border-left: solid 4px $off-white !important;
+            }
+    
+            .main-nav li:nth-child(3) {
+                background-color: $act-brown;
+    
+                .page-marker {
+                    background-color: $bg-green;
+                    display: inline !important;
+                }
+    
+                a,
+                a:hover,
+                a:active,
+                a:focus {
+                    color: $off-white;
+                }
+            }
+        }
+
+
     }
 
     &.layout-white {
         background-color: $off-white;
         color: $charcoal;
+
+        .header1,
+        .header2 {
+            background-color: $off-white;
+        }
     }
 
     h1 {

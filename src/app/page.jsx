@@ -33,13 +33,13 @@ const restData = await fetchData(restPathHome)
       <section>
         <p>Connor Froese</p>
         <h1>{restData.acf.hero_text}</h1>
-        <p>{restData.acf.sub_hero_text}</p>
+        <p className='sub-hero-text'>{restData.acf.sub_hero_text}</p>
       </section>
 
       <ul>
         <li>
           <Link prefetch={true} href='/projects'>
-            View Works
+            <p>View Works</p>
             <div className='line'></div>
             <div className='link-box blue'>
               <div>
@@ -50,7 +50,7 @@ const restData = await fetchData(restPathHome)
         </li>
         <li>
           <Link prefetch={true} href='/about'>
-            About Me
+          <p>About Me</p>
             <div className='line'></div>
             <div className='link-box red'>
               <div>
@@ -61,7 +61,7 @@ const restData = await fetchData(restPathHome)
         </li>
         <li>
           <Link prefetch={true} href='/contact'>
-            Contact
+          <p>Contact</p>
             <div className='line'></div>
             <div className='link-box green'>
               <div>

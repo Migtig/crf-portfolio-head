@@ -6,9 +6,27 @@
 .page {
     letter-spacing: 1px;
 
+
+
+    max-width: 65rem;
+
     .page-title-mobile {
         font-weight: 500;
         letter-spacing: 2px;
         margin-bottom: 4rem;
+    }
+
+    @media (min-width: 700px) {
+
+        margin: 2rem 0 0 0;
+        
+        .page-title-mobile {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+
     }
 }

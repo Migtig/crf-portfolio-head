@@ -58,4 +58,87 @@
             }
         }
     }
+
+    @media (min-width: 700px) {
+
+        padding: 0 2rem;
+
+
+    }
+
+    @media (min-width: 1200px) {
+        padding: 0;
+
+        .project-card {
+            display: grid;
+            grid-template-areas: 
+            'area1 area2';
+            gap: 1rem;
+
+            .screenshot {
+                object-fit: cover;
+
+                aspect-ratio: 3 / 2;
+            }
+
+            .project-info {
+                
+                h2 {
+                    font-size: 1.8rem;
+                    margin: 1rem 0 0;
+                    text-align: right;
+                }
+
+                .tech-stack {
+                    margin: 0.5rem 0;
+                    justify-content: flex-end;
+
+                    li {
+                        font-size: 1rem;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    text-align: right;
+                }
+
+                .links {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    gap: 1rem;
+
+                    margin-top: 1rem;
+
+                    div {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+
+                .project-info {
+                    grid-area: area1;
+
+                    h2 {
+                        text-align: left;
+                    }
+
+                    .tech-stack {
+                        justify-content: flex-start;
+                    }
+
+                    p {
+                        text-align: left;
+                    }
+                }
+
+                .screenshot {
+                    grid-area: area2;
+                }
+            }
+        }
+    }
 }
