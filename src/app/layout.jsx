@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={elzaFont.variable}>
       <body>
-        <SiteLayout>{children}</SiteLayout>
+        <SiteLayout prop={children}></SiteLayout>
       </body>
     </html>
   )

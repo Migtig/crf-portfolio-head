@@ -55,7 +55,7 @@ const elzaFont = localFont({
   display: 'swap',
 })
 
-export default function SiteLayout({ children }) {
+export default function SiteLayout({ prop }) {
   const pathname = usePathname();
   let colour = ''
   let logo = logoWhite
@@ -161,7 +161,7 @@ export default function SiteLayout({ children }) {
         </div>
 
         <main className={`${styles.main} main`}>
-          {children}         
+          {prop}         
         </main>
 
         </div>
