@@ -144,15 +144,17 @@
                     display: inline;
                     width: 12rem;
                     height: 10rem;
+                    padding: 0.35rem;
     
                     top: 0;
                     right: 50%;
                     transform: translate(50%, 0);
 
-                    border-right: solid 2px $off-white;
     
                     div {
-    
+
+                        border-right: solid 2px $off-white;
+
                         svg {
                             display: none;
                         }

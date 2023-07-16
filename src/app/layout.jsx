@@ -1,5 +1,4 @@
 // Import styles
-import './styles/styles.scss'
 import localFont from 'next/font/local'
 
 // Import components
