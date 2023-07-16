@@ -7,8 +7,13 @@ import SiteLayout from './SiteLayout'
 
 
 export const metadata = {
-  title: 'Connor Froese',
+  title: {
+    template: '%s | Connor Froese',
+    default: 'Connor Froese',
+  },
   description: 'The personal portfolio site for Connor Froese, Front-End Developer',
+  keywords: [ 'web developer', 'Next.js', 'front end developer', 'portfolio', 'WordPress', 'React', 'Vancouver', 'junior developer'],
+  generator: 'Next.js',
 }
 
 const elzaFont = localFont({

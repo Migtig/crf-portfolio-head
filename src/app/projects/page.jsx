@@ -1,6 +1,12 @@
 // Import components
 import ProjectCard from './ProjectCard'
 
+export const metadata = {
+    title: {
+        absolute: 'Projects',
+    },
+}
+
 
 async function fetchData() {
 

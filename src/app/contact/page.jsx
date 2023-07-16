@@ -1,7 +1,11 @@
 // Import functions
 import Link from 'next/link'
 
-// Import styles
+export const metadata = {
+    title: {
+        absolute: 'Contact',
+    },
+}
 
 async function fetchData(restPath) {
 
