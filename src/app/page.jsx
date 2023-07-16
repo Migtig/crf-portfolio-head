@@ -1,13 +1,6 @@
 // Import functions
-import Image from 'next/image'
 import Link from 'next/link'
 
-// Import styles
-import './styles/styles.scss'
-
-// Import components
-import Loading from './Loading'
-// Import media
 
 export default async function Home() {
 
