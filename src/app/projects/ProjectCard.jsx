@@ -23,7 +23,7 @@ export default async function ProjectCard({ prop }) {
 
 
     return(
-        <article className='project-card'>
+        <article className='project-card' data-aos="fade-up">
             <Image
                 src={imageObject.media_details.sizes.large.source_url}
                 width={imageObject.media_details.sizes.large.width}

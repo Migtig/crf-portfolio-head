@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 
 // Import components
 import SiteLayout from './SiteLayout'
+import AOSInit from './aos'
 
 
 export const metadata = {
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en" className={elzaFont.variable}>
+      <AOSInit />
       <body>
         <SiteLayout prop={children}></SiteLayout>
       </body>
