@@ -41,7 +41,8 @@ export default async function Contact() {
             <h3>Phone</h3>
             <p>{restData.acf.phone_number}</p>
 
-            <h3><Link href={restData.acf.linkedin_link.url}>LinkedIn</Link></h3>
+            <h3>LinkedIn</h3>
+            <p className='linkedin'><Link href={restData.acf.linkedin_link.url}>{restData.acf.linkedin_link.url}</Link></p>
         </div>
     )
 }

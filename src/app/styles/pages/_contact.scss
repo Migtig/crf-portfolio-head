@@ -32,6 +32,13 @@
         letter-spacing: 1px;
 
         margin-bottom: 2rem;
+
+        &.linkedin {
+            
+            a {
+                text-decoration: underline;
+            }
+        }
     }
 
     @media (min-width: 1200px) {
