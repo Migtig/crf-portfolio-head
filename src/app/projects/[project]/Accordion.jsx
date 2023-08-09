@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-export default function Accordion({ fields }) {
+
+export default function Accordion({ fields, images }) {
 
     const [selected, setSelected] = useState(null)
 
@@ -18,6 +19,10 @@ export default function Accordion({ fields }) {
         }
     }
 
+    // fields.process_content.map((stage) => (
+
+    // ))
+
     return (
         <div className="accordion">
             <div className='title' onClick={() => toggle(i)}>
@@ -26,13 +31,32 @@ export default function Accordion({ fields }) {
             </div>
 
             <div className={selected === i ? 'content show' : 'content'}>
-                {fields.process_content.map((stage) => (
-                    <section>
-                        <h3>{stage.stage_heading}</h3>
-                        <p>{stage.stage_content}</p>
-                        
-                    </section>
-                ))}
+                {fields.process_content.map((stage) => {
+                    let stageImg = images.find((anImg) => anImg.id === stage.stage_image)
+                    if ( stageImg ) {
+                        return (
+                            <div className='stage-section'>
+                                <h3>{stage.stage_heading}</h3>
+                                <p>{stage.stage_content}</p>
+                                <Image 
+                                    src={stageImg.media_details.sizes.full.source_url}
+                                    width={stageImg.media_details.sizes.full.width}
+                                    height={stageImg.media_details.sizes.full.height}
+                                    alt={stageImg.alt_text}
+                                    className='process-screenshot'
+                                ></Image>
+                            </div>
+                        )
+                    }
+                    else {
+                        return (
+                            <div className='stage-section'>
+                                <h3>{stage.stage_heading}</h3>
+                                <p>{stage.stage_content}</p>
+                            </div>
+                        )
+                    }
+                })}
             </div>
         </div>
     )

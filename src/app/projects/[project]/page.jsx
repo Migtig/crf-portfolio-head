@@ -26,6 +26,27 @@ export default async function ProjectInfo({ params }) {
 
     const project = await fetchData(projectPath, params.project)
     const projImage = await fetchData(imagePath, project.acf.project_screenshot)
+    let processImages = []
+    let pImgObjects = [
+        {
+            id: 141
+        },
+        {
+            id: 144
+        }
+    ]
+    let trackerX = 0
+    project.acf.process_fields.forEach((process) => {
+        process.process_content.forEach( async (stage) => {
+            processImages.push(stage.stage_image)
+        })
+    })
+
+    while (trackerX < processImages.length                                          ) {
+        pImgObjects[trackerX] = await fetchData(imagePath, processImages[trackerX])
+        trackerX++
+    }
+
 
 
     return (
@@ -45,6 +66,12 @@ export default async function ProjectInfo({ params }) {
                         <li>{skill}</li>
                     ))}
                 </ul>
+
+                <ul>
+                    {pImgObjects.map((imageID) => (
+                        <li>{imageID.id}</li>
+                    ))}
+                </ul>
             </section>
 
             <Image
@@ -57,7 +84,7 @@ export default async function ProjectInfo({ params }) {
             />
 
             {project.acf.process_fields.map((theFields) => (
-                <Accordion fields={theFields}></Accordion>
+                <Accordion fields={theFields} images={pImgObjects}></Accordion>
             ))}
 
         </div>
