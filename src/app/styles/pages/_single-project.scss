@@ -1,3 +1,5 @@
+@import 'components/accordion';
+
 .page-single-project {
 
     .project-header {
@@ -10,5 +12,6 @@
     .screenshot {
         width: 60%;
         height: auto;
+        margin-bottom: 2rem;
     }
 }

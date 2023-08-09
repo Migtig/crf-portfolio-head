@@ -56,9 +56,9 @@ export default async function ProjectInfo({ params }) {
                 className='screenshot'
             />
 
-            <Accordion fields={project.acf.process_fields[0]}>
-
-            </Accordion>
+            {project.acf.process_fields.map((theFields) => (
+                <Accordion fields={theFields}></Accordion>
+            ))}
 
         </div>
     )

@@ -1,0 +1,53 @@
+.accordion {
+    padding: 0.8rem 1rem 0.8rem 1.5rem;
+    border: solid 2px $charcoal;
+    // border-radius: 0.5rem;
+    margin-bottom: 1rem;
+
+    .title {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        span {
+            height: 1.8rem;
+            transition: all 0.4s;
+
+            &.rotated {
+                transform: rotate(90deg);
+                transition: all 0.4s;
+            }
+
+            svg {
+                height: 1.8rem;
+                width: auto;
+            }
+        }
+    }
+
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0,1,0,1);
+
+        &.show {
+            height: auto;
+            max-height: 9999px;
+            transition: all 0.5s cubic-bezier(1,0,1,0);
+        }
+
+        h3 {
+            font-weight: 500;
+        }
+
+        p {
+            font-weight: 300;
+        }
+    }
+}
