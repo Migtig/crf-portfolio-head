@@ -51,14 +51,14 @@ export default function SiteLayout({ prop }) {
   let logo = logoWhite
 
   if ( pathname === '/projects') {
-    colour = '-blue'
+    colour = '-blue layout-dark'
     
   } 
   else if ( pathname === '/about' ) {
-    colour = '-red'
+    colour = '-red layout-dark'
   }
   else if ( pathname === '/contact' ) {
-    colour = '-green'
+    colour = '-green layout-dark'
   }
   else {
     colour = '-white' 

@@ -192,12 +192,14 @@ html {
                         display: block;
                         position: absolute;
 
+                        width: 100%;
+
                         bottom: 4rem;
                         right: 16px;
 
                         .main-nav {
                             text-align: right;
-                            margin-bottom: 6rem;
+                            margin-bottom: 4rem;
                             padding: 0;
 
                             li {
@@ -206,12 +208,12 @@ html {
                                 font-weight: 500;
                                 letter-spacing: 2px;
 
-                                margin-bottom: 1rem;
+                                margin-bottom: 0.5rem;
                                 margin-left: auto;
                                 padding: 16px;
-                                width: fit-content;
+                                width: 100%;
 
-                                border-radius: 2rem;
+                                border-radius: 0 2rem 2rem 0;
 
                                 .page-marker {
                                     height: 2rem;
@@ -226,6 +228,7 @@ html {
                                     border-radius: 1rem;
 
                                 }
+
                             }
                         }
 
