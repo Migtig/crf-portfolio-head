@@ -35,28 +35,55 @@
             line-height: 2rem;
         }
 
-        .repo-link,
-        .project-link {
-            text-align: right;
-            margin-bottom: 3rem;
-        }
+        .links {
+            $linkfont-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
 
-        .repo-link a {
-            padding: 0.2rem 0.5rem;
-            border-bottom: solid 2px $off-white;
-            margin: 0 1rem;
-        }
+            .link {
+                width: fit-content;
+                border: solid 1px $off-white;
 
-        .project-link a {
-            background-color: $act-brown;
-            padding: 0.8rem 1.5rem;
+                padding: 0;
+                margin-bottom: 0.6rem;
 
-            &:hover,
-            &:focus,
-            &:active {
-                color: $charcoal;
+                transition: all 0.1s;
+
+                font-size: $linkfont-size;
+
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 0.4rem;
+
+                    padding: 0.4rem 0.8rem;
+
+
+                    svg {
+                        height: $linkfont-size;
+                        width: auto;
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    transform: translate(0px, -4px);
+                    background-color: $off-white;
+                    color: $bg-blue; 
+                }
+
+                &.view-project-link {
+                    background-color: $act-brown;
+                    border: none;
+                    padding: 0.4rem 1.5rem;
+                    margin-top: 0.5rem;
+                }
             }
         }
+
     }
 
     @media (min-width: 700px) {
