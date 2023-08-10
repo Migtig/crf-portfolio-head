@@ -45,9 +45,11 @@ export default async function ProjectCard({ prop }) {
                 <p className='overview'>{prop.acf.project_overview}</p>
 
                 <div className='links'>
-                    <div className='repo-link'><Link href={prop.acf.project_repo_link.url}>{prop.acf.project_repo_link.title}</Link></div>
+                    <div className='repo-link'><Link href={prop.acf.project_repo_link.url}>GitHub Repo</Link></div>
 
-                    <div className='project-link'><Link href={prop.acf.project_link.url}>{prop.acf.project_link.title}</Link></div>
+                    <div className='project-link'><Link href={prop.acf.project_link.url}>View Project</Link></div>
+
+                    <div className='more-info-link'><Link href={`projects/${prop.id}`}>More Info</Link></div>
                 </div>
 
             </div>
