@@ -1,17 +1,119 @@
 @import 'components/accordion';
 
 .page-single-project {
+    padding-bottom: 4rem;
 
     .project-header {
+        margin-bottom: 2rem;
 
         p {
             font-weight: 300;
         }
+
+        ul {
+            margin-bottom: 1rem;
+            padding: 0;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                background-color: $rich-blue;
+                color: $off-white;
+                padding: 0.3rem 0.7rem;
+                margin: 0.1rem;
+                border-radius: 1rem;
+
+                font-size: 0.7rem;
+            }
+        }
+
+        .links {
+
+            $linkfont-size: 0.9rem;
+
+            .link {
+                width: fit-content;
+                border: solid 2px $charcoal;
+                box-shadow: -2px 2px $charcoal;
+
+                padding: 0;
+                margin-bottom: 0.6rem;
+
+                transition: all 0.05s;
+
+                font-size: $linkfont-size;
+
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 0.4rem;
+
+                    padding: 0.4rem 0.8rem;
+
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $charcoal;
+                    }
+
+                    svg {
+                        height: $linkfont-size;
+                        width: auto;
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    box-shadow: -4px 4px $charcoal;
+
+                    transform: translate(2px, -2px);
+                }
+            }
+        }
     }
 
     .screenshot {
-        width: 60%;
+        width: 100%;
         height: auto;
         margin-bottom: 2rem;
+    }
+
+    @media (min-width: 700px) {
+
+        .links {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        .project-header {
+            display: grid;
+            grid-template-columns: 60% 1fr;
+            column-gap: 2rem;
+
+            *:not(ul) {
+                grid-column: 1 / 2;
+                margin: 0;
+            }
+
+            ul {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                margin: 0;
+
+                justify-content: flex-end;
+            }
+
+            .links {
+                margin-top: 1.5rem;
+            }
+        }
+
     }
 }

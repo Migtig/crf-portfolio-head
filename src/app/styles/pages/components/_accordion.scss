@@ -1,7 +1,6 @@
 .accordion {
     padding: 0.8rem 1rem 0.8rem 1.5rem;
-    border: solid 2px $charcoal;
-    // border-radius: 0.5rem;
+    border: solid 3px $charcoal;
     margin-bottom: 1rem;
 
     .title {
@@ -55,7 +54,7 @@
 
         .process-screenshot {
             display: block;
-            max-width: 80%;
+            max-width: 90%;
             height: auto;
             margin: 0 auto;
         }
