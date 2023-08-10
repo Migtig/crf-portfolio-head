@@ -11,6 +11,26 @@ div.layout {
             .header2 {
                 border-bottom: solid 4px $off-white !important;
             }
+
+            .header2,
+            .main {
+                border-left: solid 4px $off-white !important;
+            }
+
+            .main-nav li {
+                background-color: transparent;
+                transition: background-color 0.08s;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background-color: rgba(198, 153, 99, 0.5);
+                    
+                    a {
+                        color: white;
+                    }
+                }
+            }
         }
     }
 
@@ -24,24 +44,17 @@ div.layout {
                 background-color: $bg-blue;
             }
 
-            .header2,
-            .main {
-                border-left: solid 4px $off-white !important;
-            }
-
             .main-nav li:nth-child(1) {
+
+                a {
+                    border-bottom: solid 2px $off-white;
+                }
 
                 .page-marker {
                     background-color: $bg-blue;
                     display: inline !important;
                 }
 
-                a,
-                a:hover,
-                a:active,
-                a:focus {
-                    color: $off-white;
-                }
             }
         }
 
@@ -55,26 +68,17 @@ div.layout {
             .header1,
             .header2 {
                 background-color: $bg-red;
-                border-bottom: solid 4px $off-white !important;
-            }
-    
-            .header2,
-            .main {
-                border-left: solid 4px $off-white !important;
             }
     
             .main-nav li:nth-child(2) {
+
+                a {
+                    border-bottom: solid 2px $off-white;
+                }
     
                 .page-marker {
                     background-color: $bg-red;
                     display: inline !important;
-                }
-    
-                a,
-                a:hover,
-                a:active,
-                a:focus {
-                    color: $off-white;
                 }
             }
         }
@@ -82,33 +86,23 @@ div.layout {
 
     &.layout-green {
         background-color: $bg-green;
-        color: $off-white;
 
         @media (min-width: 700px) {
 
             .header1,
             .header2 {
                 background-color: $bg-green;
-                border-bottom: solid 4px $off-white !important;
-            }
-    
-            .header2,
-            .main {
-                border-left: solid 4px $off-white !important;
             }
     
             .main-nav li:nth-child(3) {
+
+                a {
+                    border-bottom: solid 2px $off-white;
+                }
     
                 .page-marker {
                     background-color: $bg-green;
                     display: inline !important;
-                }
-    
-                a,
-                a:hover,
-                a:active,
-                a:focus {
-                    color: $off-white;
                 }
             }
         }
@@ -123,6 +117,18 @@ div.layout {
         .header1,
         .header2 {
             background-color: $off-white;
+        }
+
+        .main-nav li {
+
+            background-color: transparent;
+            transition: background-color 0.08s;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: rgba(24, 26, 26, 0.2);
+            }
         }
     }
 
@@ -147,11 +153,5 @@ div.layout {
     a {
         text-decoration: none;
         color: inherit;
-
-        &:hover,
-        &:active,
-        &:focus {
-            color: $act-brown;
-        }
     }
 }
