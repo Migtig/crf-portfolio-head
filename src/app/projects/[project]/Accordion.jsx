@@ -19,10 +19,6 @@ export default function Accordion({ fields, images }) {
         }
     }
 
-    // fields.process_content.map((stage) => (
-
-    // ))
-
     return (
         <div className="accordion">
             <div className='title' onClick={() => toggle(i)}>

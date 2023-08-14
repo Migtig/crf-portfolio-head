@@ -32,7 +32,7 @@ export default async function ProjectInfo({ params }) {
 
     if (project.acf.process_fields) {
         project.acf.process_fields.forEach((process) => {
-            process.process_content.forEach( async (stage) => {
+            process.process_content.forEach((stage) => {
                 processImages.push(stage.stage_image)
             })
         })
