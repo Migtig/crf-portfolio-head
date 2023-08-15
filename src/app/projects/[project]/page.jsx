@@ -38,12 +38,10 @@ export default async function ProjectInfo({ params }) {
         })
     }
 
-
     while (trackerX < processImages.length                                          ) {
         pImgObjects[trackerX] = await fetchData(imagePath, processImages[trackerX])
         trackerX++
     }
-
 
 
     if (project.acf.process_fields) {
