@@ -78,9 +78,14 @@
     }
 
     .screenshot {
+        display: block;
+        box-sizing: border-box;
         width: 100%;
         height: auto;
-        margin-bottom: 2rem;
+        max-width: 46rem;
+        margin: 0 auto 3rem;
+        padding: 2rem;
+        border: solid $charcoal 2px;
     }
 
     @media (min-width: 700px) {
@@ -114,6 +119,13 @@
             .links {
                 margin-top: 1.5rem;
             }
+        }
+
+        .accordion {
+            max-width: 42rem;
+            margin: 0 auto 1rem;
+
+
         }
 
     }
