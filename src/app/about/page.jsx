@@ -1,5 +1,6 @@
 // Import functions
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata = {
     title: {
@@ -31,7 +32,7 @@ export default async function About() {
 
             <section className='section-personal'>
 
-                <h2>The Personal Bits</h2>
+                <h2>The Personal</h2>
 
                 <Image
                     src={imgData.media_details.sizes.full.source_url}
@@ -45,17 +46,24 @@ export default async function About() {
                 <p>{restData.acf.short_bio}</p>
             </section>
 
-            <section className='section-professional'>
-                <h2>The Professional Bits</h2>
+            <div className='divider'></div>
 
-                <ul>
-                    {restData.acf.skills_list.map((category) => (
-                        <li>
-                            <h3>{category.skill_group}</h3>
-                            <p>{category.skill_content}</p>
-                        </li>
+            <section className='section-professional'>
+                <h2>The Professional</h2>
+
+                <h3>Skills</h3>
+                <ul className='skill-list'>
+                    {restData.acf.skills_list.map((skill) => (
+                        <li className={skill.skill_category}>{skill.skill_name}</li>
                     ))}
                 </ul>
+            </section>
+
+            <div className='divider'></div>
+
+            <section className='section-contact'>
+                <h2>Want to get in touch?</h2>
+                <div className='link'><Link href='/contact'>Contact Me</Link></div>
             </section>
         </div>
     )

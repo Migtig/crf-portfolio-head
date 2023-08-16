@@ -2,9 +2,15 @@
 
     padding: 1rem;
 
+    .divider {
+        margin: 6rem auto;
+        width: 80%;
+        height: 0;
+        border: solid 1px $act-brown;
+    }
+
     .section-personal {
 
-        margin-bottom: 6rem;
 
         .portrait {
             width: 100%;
@@ -26,39 +32,67 @@
     .section-professional {
 
         font-weight: 300;
-
         h2 {
             font-weight: 500;
             margin-bottom: 3rem;
         }
 
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
         ul {
             padding: 0;
 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
             li {
-                border-top: solid 2px $act-brown;
+                margin: 0.2rem;
+                padding: 0.3rem 0.8rem;
+                background-color: $act-brown;
+                border-radius: 1rem;
 
-                &:nth-last-child(1) {
-                    border-bottom: solid 2px $act-brown;
-                }
+                font-size: 1rem;
+                font-weight: 500;
+                color: $off-white;
+            }
+        }
+    }
 
-                h3,
-                p {
-                    margin: 0;
-                }
+    .section-contact {
 
-                h3 {
-                    text-transform: uppercase;
-                    font-weight: 300;
-                    font-size: 2.5rem;
-                    margin-bottom: 1rem;
-                    letter-spacing: 2px;
-                }
+        text-align: center;
+        padding-bottom: 4rem;
 
-                p {
-                    text-align: right;
-                }
+        .link {
+            width: fit-content;
+            border: solid 1px $off-white;
 
+            padding: 0;
+            margin: 0 auto 0.6rem;
+
+            transition: all 0.1s;
+
+            font-size: 1rem;
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0.4rem;
+
+                padding: 0.4rem 0.8rem;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                transform: translate(0px, -4px);
+                background-color: $off-white;
+                color: $bg-red; 
             }
         }
     }
@@ -107,16 +141,13 @@
                 font-weight: 500;
             }
 
+            h3 {
+                font-size: 1.5rem;
+            }
+
             ul {
 
                 li {
-
-
-                    h3 {
-                        margin: 0;
-                        padding-left: 1rem;
-                        font-size: 3rem;
-                    }
 
                 }
 
@@ -145,35 +176,6 @@
 
                 li {
 
-                    height: 6.4rem;
-
-                    h3 {
-                        margin: 0;
-                        padding-left: 2rem;
-                        font-size: 5.5rem;
-                    }
-
-                    p {
-                        display: none;
-                    }
-
-                    &:hover {
-
-                        background-color: $act-brown;
-                        
-                        h3 {
-                            display: none;
-                        }
-
-                        p {
-                            display: block;
-
-                            font-size: 2.5rem;
-                            font-weight: 300;
-                            color: $charcoal;
-                            padding-bottom: 0.2rem;
-                        }
-                    }
                 }
             }
         }
