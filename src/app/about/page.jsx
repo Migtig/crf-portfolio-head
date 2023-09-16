@@ -23,6 +23,7 @@ export default async function About() {
 
     const restData = await fetchData('https://connorfroese.ca/portfolio-src/wp-json/wp/v2/pages/17')
     const imgData = await fetchData(`https://connorfroese.ca/portfolio-src/wp-json/wp/v2/media/${restData.acf.portrait_image}`)
+    const resumeData = await fetchData(`https://connorfroese.ca/portfolio-src/wp-json/wp/v2/media/${restData.acf.resume}`)
     
     return(
         <div className='page page-about'>
@@ -57,6 +58,10 @@ export default async function About() {
                         <li className={skill.skill_category}>{skill.skill_name}</li>
                     ))}
                 </ul>
+
+                <h3>Resume</h3>
+                <div className='link resume-link'><a href={resumeData.guid.rendered} target='_blank'>PDF Link</a></div>
+                <iframe src={resumeData.guid.rendered} frameborder="0" className='resume-frame'></iframe>
             </section>
 
             <div className='divider'></div>

@@ -1,5 +1,34 @@
 .page-about {
 
+    .link {
+        width: fit-content;
+        border: solid 1px $off-white;
+
+        padding: 0;
+        margin: 0 auto 0.6rem;
+
+        transition: all 0.1s;
+
+        font-size: 1rem;
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.4rem;
+            
+            padding: 0.4rem 0.8rem;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            transform: translate(0px, -4px);
+            background-color: $off-white;
+            color: $bg-red; 
+        }
+    }
+
     padding: 1rem;
 
     .divider {
@@ -30,14 +59,10 @@
     }
 
     .section-professional {
-
-        font-weight: 300;
-        h2 {
-            font-weight: 500;
-            margin-bottom: 3rem;
-        }
+        font-weight: 500;
 
         h3 {
+            margin-top: 2rem;
             font-size: 1.2rem;
             font-weight: 500;
         }
@@ -56,9 +81,12 @@
                 border-radius: 1rem;
 
                 font-size: 1rem;
-                font-weight: 500;
                 color: $off-white;
             }
+        }
+
+        .resume-frame {
+            display: none;
         }
     }
 
@@ -67,34 +95,6 @@
         text-align: center;
         padding-bottom: 4rem;
 
-        .link {
-            width: fit-content;
-            border: solid 1px $off-white;
-
-            padding: 0;
-            margin: 0 auto 0.6rem;
-
-            transition: all 0.1s;
-
-            font-size: 1rem;
-
-            a {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 0.4rem;
-
-                padding: 0.4rem 0.8rem;
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-                transform: translate(0px, -4px);
-                background-color: $off-white;
-                color: $bg-red; 
-            }
-        }
     }
 
     @media (min-width: 700px) {
@@ -124,6 +124,8 @@
                 padding: 0 0 0 1rem;
                 border-left: solid 0.5rem $act-brown;
                 margin: 0 auto;
+                max-width: 400px;
+                align-self: center;
             }
 
             p {
@@ -145,12 +147,18 @@
                 font-size: 1.5rem;
             }
 
-            ul {
+            .resume-link {
+                display: none;
+            }
 
-                li {
+            .resume-frame {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+                max-width: 600px;
 
-                }
-
+                aspect-ratio: 1 / 1.29;
             }
         }
     }
