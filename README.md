@@ -2,7 +2,7 @@
 
 This project is the front-end of my personal portfolio website, built in Next.js as a headless CMS, and using a custom WordPress setup for the backend.
 
-Click <a href="https://www.crf-dev.ca/>here</a> to view the live site
+Click <a href="https://www.crf-dev.ca/">here</a> to view the live site
 
 <img width="820" alt="screenshot of portfolio front page" src="https://connorfroese.ca/portfolio-src/wp-content/uploads/2023/07/portfolio-final.jpg">
 
