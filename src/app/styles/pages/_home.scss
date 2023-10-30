@@ -120,9 +120,9 @@
 
         ul {
 
-            position: fixed;
+            position: relative;
             bottom: -2rem;
-            width: 50%;
+            width: 42rem;
 
             display: flex;
             flex-direction: row;
@@ -136,12 +136,13 @@
 
                 width: 12rem;
                 padding-top: 1.5rem;
+                margin-top: 1rem;
 
                 .link-box {
 
                     display: inline;
                     width: 12rem;
-                    height: 10rem;
+                    height: 4.5rem;
                     padding: 0.35rem;
     
                     top: 0;
