@@ -157,6 +157,7 @@ export default function SiteLayout({ prop }) {
             src={lilDude}
             width={667}
             height={500}
+            alt='A little stick figure animation'
             className='lildude'
           />
         </main>
