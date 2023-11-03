@@ -117,6 +117,16 @@ html {
 
         .main {
             padding: 1rem 1rem;
+
+            .lildude {
+                display: none;
+                position: absolute;
+                bottom: 0;
+                right: 1rem;
+
+                height: 3rem;
+                width: auto;
+            }
         }
 
 
@@ -154,6 +164,10 @@ html {
                 .main {
                     grid-area: mainpage;
                     border-left: solid 4px $charcoal;
+
+                    .lildude {
+                        display: block;
+                    }
                 }
 
 

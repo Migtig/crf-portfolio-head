@@ -20,6 +20,7 @@ import CloseIcon from './CloseIcon'
 // Import media
 import logoBlack from '../../public/images/logo-v1-black.png'
 import logoWhite from '../../public/images/logo-v1-white.png'
+import lilDude from '../../public/images/lildude.gif'
 
 
 
@@ -151,7 +152,13 @@ export default function SiteLayout({ prop }) {
         </div>
 
         <main className={`${styles.main} main`}>
-          {prop}         
+          {prop}
+          <Image
+            src={lilDude}
+            width={667}
+            height={500}
+            className='lildude'
+          />
         </main>
 
         </div>
